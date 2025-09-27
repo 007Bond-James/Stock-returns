@@ -17,9 +17,9 @@ def Stock_returns_calculator():
     
         def print_result(label, value):
             if value>0:
-                print(Fore.GREEN + Style.BRIGHT + f"{label} {value}"+ Style.RESET_ALL)   #Displays Profit in Green
+                print(Fore.GREEN + Style.BRIGHT + f"{label} {value:.2f}"+ Style.RESET_ALL)   #Displays Profit in Green
             elif value<0:
-                print(Fore.RED + Style.BRIGHT + f"{label} {value}"+ Style.RESET_ALL)     #Displays Loss in Red
+                print(Fore.RED + Style.BRIGHT + f"{label} {value:.2f}"+ Style.RESET_ALL)     #Displays Loss in Red
             else:
                 print(Fore.YELLOW + Style.BRIGHT + f"{label} {value}"+ Style.RESET_ALL)  #Displays Break-even in Yellow
 
@@ -29,7 +29,7 @@ def Stock_returns_calculator():
     #If user enters a non-numeric value, error message wil be displayed in red. 
     
     except ValueError:
-        print(Fore.RED +"Invalid input, please enter a numberic value." + Style.RESET_ALL)
+        print(Fore.RED +"Invalid input, please enter a nummeric value." + Style.RESET_ALL)
 
 #Calling the Function to run the calculator
 Stock_returns_calculator()
